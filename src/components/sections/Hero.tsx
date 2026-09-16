@@ -45,7 +45,7 @@ function BoxWord({ progress, range, accent, children }: BoxWordProps) {
   return (
     <span
       className={`mx-[0.08em] inline-flex overflow-hidden rounded-[0.2em] px-[0.28em] ${
-        accent ? "bg-accent" : "bg-ink"
+        accent ? "bg-accent-hover" : "bg-accent"
       }`}
     >
       <motion.span
@@ -87,21 +87,24 @@ export function Hero() {
     Math.max(intro.get(), scrollYProgress.get()),
   );
 
-  const exitOpacity = useTransform(scrollYProgress, [0.78, 1], [1, 0]);
-  const exitY = useTransform(scrollYProgress, [0.78, 1], [0, -48]);
+  // No fade-out: once the boxes are revealed the hero simply scrolls away,
+  // with a slight upward drift so the hand-off to the next section feels continuous.
+  const exitY = useTransform(scrollYProgress, [0.7, 1], [0, -32]);
   const hintOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const hintDisplay = useTransform(scrollYProgress, (v) =>
     v > 0.1 ? "none" : "block",
   );
 
   return (
-    <section ref={ref} id="top" className="relative h-[190vh]">
+    // The sticky box is taller than its centered content, so the next section
+    // is pulled up into that empty tail to avoid a blank stretch after the hero.
+    <section ref={ref} id="top" className="relative -mb-[22vh] h-[190vh]">
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center px-5">
         <motion.div
-          style={reduce ? undefined : { opacity: exitOpacity, y: exitY }}
+          style={reduce ? undefined : { y: exitY }}
           className="flex flex-col items-center text-center"
         >
-          <h1 className="text-display text-ink">
+          <h1 className="text-display text-accent">
             {HERO_LINES.map((line, li) => (
               <span key={li} className="block">
                 {line.map((piece, pi) =>

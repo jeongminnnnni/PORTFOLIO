@@ -95,13 +95,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto grid h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-5 md:px-8">
-        <a
-          href="#top"
-          className="flex items-center gap-2 justify-self-start text-[15px] font-extrabold tracking-tight text-ink transition-colors duration-200 hover:text-accent"
-        >
-          <span aria-hidden className="h-2.5 w-2.5 rounded-[3px] bg-accent" />
-          {profile.name}
-        </a>
+        <span aria-hidden />
 
         <nav aria-label="섹션 이동">
           <ul className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.1em] md:gap-8 md:text-xs md:tracking-[0.14em]">

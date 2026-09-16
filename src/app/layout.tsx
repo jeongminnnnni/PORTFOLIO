@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.roleShort}`,
+  title: `${profile.name} — Portfolio`,
   description: profile.headline,
   openGraph: {
-    title: `${profile.name} — ${profile.roleShort}`,
+    title: `${profile.name} — Portfolio`,
     description: profile.headline,
     type: "website",
     locale: "ko_KR",

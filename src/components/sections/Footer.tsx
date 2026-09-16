@@ -1,33 +1,34 @@
 import { profile } from "@/content/portfolio";
-import { Section } from "@/components/ui/Section";
-import { InlineLink } from "@/components/ui/InlineLink";
 
 export function Footer() {
   return (
-    <footer>
-      <Section id="contact" index="07" label="Contact">
-        <p className="text-h2 text-ink">
-          구조로 문제를 푸는 이야기라면 언제든 환영합니다.
-        </p>
-        <ul className="mt-8 flex flex-col gap-3 text-[15px] font-semibold">
+    <footer className="mx-auto w-full max-w-5xl px-5 pt-12 md:px-8">
+      <div className="flex flex-col justify-between gap-3 border-t border-line py-6 font-mono text-xs text-ink-muted md:flex-row md:items-center">
+        <span>
+          © {new Date().getFullYear()} {profile.name}
+        </span>
+        <ul className="flex flex-wrap items-center gap-x-5 gap-y-1">
           <li>
-            <InlineLink href={`mailto:${profile.email}`}>{profile.email}</InlineLink>
+            <a
+              href={`mailto:${profile.email}`}
+              className="transition-colors duration-200 ease-out hover:text-accent"
+            >
+              {profile.email}
+            </a>
           </li>
           {profile.links.map((link) => (
             <li key={link.href}>
-              <InlineLink href={link.href}>{link.label}</InlineLink>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-200 ease-out hover:text-accent"
+              >
+                {link.label} ↗
+              </a>
             </li>
           ))}
         </ul>
-      </Section>
-
-      <div className="mx-auto max-w-5xl px-5 md:px-8">
-        <div className="flex flex-col justify-between gap-2 border-t border-line py-6 font-mono text-xs text-ink-muted md:flex-row">
-          <span>
-            © {new Date().getFullYear()} {profile.name}
-          </span>
-          <span>Next.js · Tailwind CSS · Framer Motion</span>
-        </div>
       </div>
     </footer>
   );

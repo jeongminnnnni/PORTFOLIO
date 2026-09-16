@@ -10,7 +10,7 @@ const heroLines: HeroPiece[][] = [
     { text: "구조", box: true },
     { text: "를 기반으로" },
   ],
-  [{ text: "AI를 통제하는", box: true }],
+  [{ text: "AI를 설계하는", box: true }],
   [
     { text: "박정민", box: true, accent: true },
     { text: "입니다." },
@@ -20,10 +20,9 @@ const heroLines: HeroPiece[][] = [
 export const profile = {
   name: "박정민",
   nameEn: "Jeongmin Park",
-  headline: "구조를 기반으로 AI를 통제하는 박정민",
+  headline: "구조를 기반으로 AI를 설계하는 박정민",
   heroLines,
-  tagline: "AX 컨설턴트 · 서비스 기획자. 아이디어부터 구현까지, 리스크를 설계로 방어합니다.",
-  roleShort: "AX 컨설턴트 / 서비스 기획자",
+  tagline: "아이디어부터 구현까지, 리스크를 설계로 방어합니다.",
   status: [
     "중앙대학교 예술공학부 재학",
     "한국능률협회컨설팅(KMAC) AI·빅데이터본부 AX 컨설팅 PA",
@@ -46,13 +45,12 @@ export const nav = [
     sections: ["about", "skills", "experience", "education"],
   },
   { id: "projects", label: "Work", sections: ["projects", "side-projects"] },
-  { id: "contact", label: "Contact", sections: ["contact"] },
 ];
 
 export const about = {
-  lead: "비즈니스 기획과 AI/개발 실행력을 함께 갖춘 기획자입니다.",
+  lead: "비즈니스 기획, AI, 개발을 한 흐름으로 연결합니다.",
   body: [
-    "해커톤부터 실제 클라이언트 컨설팅까지, '아이디어 → 설계 → 구현'의 전 단계를 직접 경험하며 현실적 제약 안에서 프로젝트를 조율하는 데 강점이 있습니다.",
+    "해커톤부터 실제 클라이언트 컨설팅까지, '아이디어 → 설계 → 구현'의 전 단계를 직접 경험하며 현실적 제약 안에서 프로젝트를 조율해 왔습니다. 문제를 정의하는 자리와 코드를 쓰는 자리 사이의 간극을 메우는 데 강점이 있습니다.",
   ],
   philosophyLabel: "설계 철학",
   philosophy:
@@ -63,34 +61,35 @@ export type SkillGroup = { title: string; items: string[] };
 
 export const skills: SkillGroup[] = [
   {
-    title: "서비스 기획 / PM",
+    title: "AI / AX",
     items: [
-      "PRD 작성, 화면설계",
-      "P0 / P1 / P2 우선순위 전략",
-      "C-level을 포함한 이해관계자 커뮤니케이션",
-    ],
-  },
-  {
-    title: "AI / AX 컨설팅",
-    items: [
-      "RAG 시스템 진단·고도화",
-      "LLM + Rule 하이브리드 구조 설계",
+      "RAG 진단·고도화 (청킹 정책, 하이브리드 검색, RRF)",
+      "LLM + Rule 하이브리드 구조 설계 (Guardrail)",
       "SFT 파인튜닝 (QLoRA)",
-      "시계열 예측 방법론 비교",
-    ],
-  },
-  {
-    title: "구현",
-    items: [
-      "React / Next.js / TypeScript 기반 목사이트·프로토타입 개발",
-      "Figma 와이어프레임",
     ],
   },
   {
     title: "데이터",
     items: [
-      "GA4 (Google Analytics Certification)",
       "Python 기반 통계·ML 비교 실험",
+      "시계열 예측 방법론 비교",
+      "GA4 (Google Analytics Certification)",
+    ],
+  },
+  {
+    title: "개발",
+    items: [
+      "React / Next.js / TypeScript 프로토타입·목사이트 개발",
+      "REST API 기반 콘텐츠 구조 구현",
+      "Figma 와이어프레임에서 구현까지",
+    ],
+  },
+  {
+    title: "기획 / PM",
+    items: [
+      "PRD 작성, 화면설계",
+      "P0 / P1 / P2 우선순위 전략",
+      "C-level을 포함한 이해관계자 커뮤니케이션",
     ],
   },
 ];
