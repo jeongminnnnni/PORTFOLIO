@@ -4,13 +4,13 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function SideProjects() {
   return (
-    <Section id="side-projects" index="05" label="Side Projects">
+    <Section id="side-projects" index="06" label="Side Projects">
       <ul className="flex flex-col">
         {sideProjects.map((item, i) => (
-          <Reveal key={item.title} delay={i * 0.04}>
+          <Reveal key={item.title} delay={i * 0.05}>
             <li className="border-b border-line/60 py-5 first:pt-0">
               <div className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
-                <p className="text-sm font-medium text-ink">{item.title}</p>
+                <p className="text-[15px] font-bold text-ink">{item.title}</p>
                 <p className="font-mono text-xs text-ink-muted">{item.meta}</p>
               </div>
               <p className="text-body mt-2 text-ink-secondary">{item.body}</p>
