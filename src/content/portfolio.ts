@@ -45,11 +45,11 @@ export const nav = [
 export const about = {
   lead: "비즈니스 기획, AI, 개발을 한 흐름으로 연결합니다.",
   body: [
-    "해커톤부터 실제 클라이언트 컨설팅까지, '아이디어 → 설계 → 구현'의 전 단계를 직접 경험하며 현실적 제약 안에서 프로젝트를 조율해 왔습니다. 문제를 정의하는 자리와 코드를 쓰는 자리 사이의 간극을 메우는 데 강점이 있습니다.",
+    "일상의 불편부터 기업의 문제까지, AI를 활용해 해결할 수 있는 방법을 고민하며 아이디어 → 문제 정의 → 서비스 설계 → 구현의 전 과정을 경험했습니다. 기획, AI, 개발, 디자인 등 서로 다른 역할의 언어를 이해하고 각자의 관점을 연결해 하나의 결과물로 만드는 데 강점이 있습니다.",
   ],
   philosophyLabel: "설계 철학",
   philosophy:
-    "LLM/AI의 창의적 생성은 살리되, 최종 판단은 규칙 기반 구조(Guardrail, 회귀 검증, 근거 카드)로 통제해 \"틀려도 정답이 살아남는 시스템\"을 만듭니다.",
+    "AI의 창의적 생성과 생산성을 극대화하고 최종 판단은 도메인 지식과 규칙 기반 구조로 통제해 틀려도 정답이 살아남는 시스템을 구축합니다.",
 };
 
 export type SkillGroup = { title: string; items: string[] };
@@ -67,16 +67,15 @@ export const skills: SkillGroup[] = [
     title: "데이터",
     items: [
       "Python 기반 통계·ML 비교 실험",
-      "시계열 예측 방법론 비교",
-      "GA4 (Google Analytics Certification)",
+      "시계열 예측 방법론 비교"
     ],
   },
   {
     title: "개발",
     items: [
-      "React / Next.js / TypeScript 프로토타입·목사이트 개발",
+      "React / Next.js / TypeScript 기반 프론트엔드 개발",
       "REST API 기반 콘텐츠 구조 구현",
-      "Figma 와이어프레임에서 구현까지",
+      "Figma 와이어프레임 및 UI/UX 디자인",
     ],
   },
   {
@@ -100,12 +99,13 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     org: "한국능률협회컨설팅(KMAC) AI·빅데이터본부",
-    role: "AX 컨설팅 PA",
+    role: "AX 컨설팅 프로젝트 어시스턴트",
     period: "2026.07 — 현재",
     ongoing: true,
     bullets: [
       "중소기업 대상 AX/데이터 컨설팅 프로젝트 다수 참여",
-      "사내 지식검색 챗봇 RAG 고도화, 거래량 예측 방법론 비교 등 진단·설계 담당",
+      "사내 지식검색 챗봇 RAG 고도화, 거래량 예측 방법론 비교 등 진단·설계",
+      "C-level 대상 커뮤니케이션 및 DX 교육 운영"
     ],
   },
 ];
@@ -113,9 +113,10 @@ export const experience: ExperienceItem[] = [
 export type EducationRow = { title: string; detail: string };
 
 export const education: EducationRow[] = [
-  { title: "중앙대학교 예술공학부", detail: "4학년 재학 · 학점 4.09" },
-  { title: "Google Analytics Certification", detail: "Google" },
-  { title: "TOEIC Speaking", detail: "IH" },
+  { title: "중앙대학교 예술공학부", detail: "4학년 재학(졸업 예정) · 학점 4.09" },
+  { title: "TOEIC Speaking", detail: "Intermediate High" },
+  { title: "AI for Future Workforce", detail: "AI 기술 구조와 이를 활용한 서비스 기획 방법론 학습"},
+  { title: "하나 청년 금융인재 양성 프로젝트 소프트웨어 교육", detail: "금융 서비스 개발에 필요한 소프트웨어 전반 교육과정 이수"}
 ];
 
 export type ProjectBlock = { label: string; body: string[] };
@@ -136,13 +137,13 @@ export const projects: Project[] = [
     title: "레오나해운항공 사내 지식검색 챗봇 RAG 고도화",
     meta: "KMAC AX 컨설팅 · 클라이언트 프로젝트",
     summary:
-      "실사용 확대 후 드러난 답변 품질 문제를 검색 로직과 근거 전달 UX 두 축으로 나눠 진단·개선한 컨설팅 프로젝트",
+      "실사용 후 드러난 답변 품질 문제를 검색 로직과 근거 전달 UX 두 축으로 나눠 진단·개선한 컨설팅 프로젝트",
     role: "PA로 원인 진단과 해결 로직 초안을 설계했고, 시니어 컨설턴트 검토를 거쳐 대부분 그대로 채택되었습니다.",
     blocks: [
       {
         label: "문제",
         body: [
-          "실사용 범위가 넓어지면서 답변 품질 문제가 드러났습니다. 원인을 '정답 문서가 검색 후보에서 탈락하는 문제'와 '답변 근거를 사용자가 확인할 수 없는 문제'로 분리해 진단했습니다.",
+          "실사용 이후 답변 품질 문제가 드러났습니다. 원인을 '정답 문서가 검색 후보에서 탈락하는 문제'와 '답변 근거를 사용자가 확인할 수 없는 문제'로 분리해 진단했습니다.",
         ],
       },
       {
@@ -166,10 +167,10 @@ export const projects: Project[] = [
   },
   {
     id: "doody",
-    title: "Doody — AI 금융 자립 플랫폼",
-    meta: "하나금융그룹 인재양성 프로젝트 · 221팀 중 13팀 최종 선발",
+    title: "AI 금융 자립 플랫폼 - DOODY ",
+    meta: "하나 청년 금융 인재양성 프로젝트 · 221팀 중 13팀 최종 선발",
     summary:
-      "은둔 청년의 심리적 장벽에 주목해 '위로 → 작은 행동 → 큰 행동 → 자립'의 단계적 회복 구조를 설계한 AI 금융 자립 플랫폼",
+      "은둔 청년의 심리적 장벽에 주목해 위로 → 작은 행동 → 큰 행동 → 자립의 단계적 회복 구조를 설계한 AI 금융 자립 플랫폼",
     role: "v1에서는 PRD·캐릭터·UX 설계와 Next.js 목사이트 개발을 직접 맡았고, v2에서는 판단 엔진의 설계 철학 제안과 UX/UI 설계를 담당했습니다.",
     blocks: [
       {
@@ -237,7 +238,7 @@ export const projects: Project[] = [
     title: "중앙대 예술공학대학 웹사이트 리뉴얼",
     meta: "UX Lead · 인터뷰 기반 IA 재설계",
     summary:
-      "학생 5명·교수 2명 인터뷰로 \"기술 오작동 → 구식 디자인 → 콘텐츠 미갱신 → 방문 안 함\"이라는 악순환 구조를 발견하고 IA부터 재설계한 프로젝트",
+      "학생 5명·교수 2명 인터뷰로 기술 오작동 → 구식 디자인 → 콘텐츠 미갱신 → 방문 안 함이라는 악순환 구조를 발견하고 IA부터 재설계한 프로젝트",
     role: "UX Lead로 인터뷰 설계와 IA 재구성, Figma 와이어프레임, Next.js 구현을 담당했습니다.",
     blocks: [
       {
@@ -313,7 +314,7 @@ export type SideProject = {
 export const sideProjects: SideProject[] = [
   {
     title: "Next Career",
-    meta: "인텔 AI 융합 기획자 양성과정 해커톤 우수상",
+    meta: "인텔 AI 융합 기획자 양성과정 우수상",
     body: "음성 인터뷰 기반 AI 채용 플랫폼. Whisper → KoBERT/KoAlpaca → RAG로 이어지는 파이프라인을 설계했습니다.",
   },
   {
