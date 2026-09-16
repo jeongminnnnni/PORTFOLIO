@@ -2,7 +2,7 @@
   모든 문구는 이 파일에서만 관리합니다.
 */
 
-export type HeroPiece = { text: string; box?: boolean; accent?: boolean };
+export type HeroPiece = { text: string; box?: boolean };
 
 /** 히어로 3줄. box: true 인 조각은 박스 안에서 스크롤에 따라 올라옵니다. */
 const heroLines: HeroPiece[][] = [
@@ -12,7 +12,7 @@ const heroLines: HeroPiece[][] = [
   ],
   [{ text: "AI를 설계하는", box: true }],
   [
-    { text: "박정민", box: true, accent: true },
+    { text: "박정민", box: true },
     { text: "입니다." },
   ],
 ];
@@ -22,11 +22,6 @@ export const profile = {
   nameEn: "Jeongmin Park",
   headline: "구조를 기반으로 AI를 설계하는 박정민",
   heroLines,
-  tagline: "아이디어부터 구현까지, 리스크를 설계로 방어합니다.",
-  status: [
-    "중앙대학교 예술공학부 재학",
-    "한국능률협회컨설팅(KMAC) AI·빅데이터본부 AX 컨설팅 PA",
-  ],
   email: "pjm010429@gmail.com",
   links: [
     { label: "GitHub", href: "https://github.com/jeongminnnnni" },

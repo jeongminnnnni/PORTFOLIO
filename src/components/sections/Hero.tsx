@@ -35,19 +35,14 @@ const HERO_LINES = (() => {
 type BoxWordProps = {
   progress: MotionValue<number>;
   range: [number, number];
-  accent?: boolean;
   children: string;
 };
 
-function BoxWord({ progress, range, accent, children }: BoxWordProps) {
+function BoxWord({ progress, range, children }: BoxWordProps) {
   const y = useTransform(progress, range, ["112%", "0%"]);
 
   return (
-    <span
-      className={`mx-[0.08em] inline-flex overflow-hidden rounded-[0.2em] px-[0.28em] ${
-        accent ? "bg-accent-hover" : "bg-accent"
-      }`}
-    >
+    <span className="mx-[0.08em] inline-flex overflow-hidden rounded-[0.2em] bg-accent px-[0.28em]">
       <motion.span
         style={{ y }}
         className="inline-block py-[0.1em] leading-[1.1] text-canvas"
@@ -115,7 +110,6 @@ export function Hero() {
                       key={pi}
                       progress={progress}
                       range={BOX_RANGES[piece.boxIndex] ?? [0, 0.2]}
-                      accent={piece.accent}
                     >
                       {piece.text}
                     </BoxWord>
@@ -124,24 +118,6 @@ export function Hero() {
               </span>
             ))}
           </h1>
-
-          <motion.p
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9, ease }}
-            className="mt-10 max-w-xl text-base font-semibold text-ink-secondary md:text-lg"
-          >
-            {profile.tagline}
-          </motion.p>
-
-          <motion.p
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2, ease }}
-            className="mt-4 font-mono text-xs text-ink-muted"
-          >
-            {profile.status.join(" · ")}
-          </motion.p>
         </motion.div>
 
         <motion.a
