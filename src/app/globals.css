@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+
+/*
+  Design tokens — see docs/portfolio_design_system.md
+  Cool neutral (Zinc) base + electric cobalt accent.
+*/
+@theme {
+  --color-canvas: #fafafa;
+  --color-surface: #ffffff;
+
+  --color-line: #e4e4e7;
+  --color-line-subtle: #f4f4f5;
+
+  --color-ink: #09090b;
+  --color-ink-secondary: #52525b;
+  --color-ink-muted: #71717a;
+
+  --color-accent: #0066ff;
+  --color-accent-subtle: #eff6ff;
+  --color-accent-hover: #0052cc;
+}
+
+@theme inline {
+  --font-sans: "Pretendard Variable", var(--font-inter), ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), "Pretendard Variable", ui-monospace, SFMono-Regular,
+    Menlo, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-subtle);
+    color: var(--color-accent-hover);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@utility text-display {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  @media (width >= 48rem) {
+    font-size: 3rem;
+  }
+}
+
+@utility text-h2 {
+  font-size: 1.25rem;
+  line-height: 1.375;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  @media (width >= 48rem) {
+    font-size: 1.5rem;
+  }
+}
+
+@utility text-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  @media (width >= 48rem) {
+    font-size: 1rem;
+  }
+}
+
+@utility text-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
