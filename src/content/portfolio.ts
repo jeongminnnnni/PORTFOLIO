@@ -134,7 +134,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "leona-rag",
-    title: "레오나해운항공 사내 지식검색 챗봇 RAG 고도화",
+    title: "물류회사 사내 지식검색 챗봇 RAG 고도화",
     meta: "KMAC AX 컨설팅 · 클라이언트 프로젝트",
     summary:
       "실사용 후 드러난 답변 품질 문제를 검색 로직과 근거 전달 UX 두 축으로 나눠 진단·개선한 컨설팅 프로젝트",
@@ -204,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     id: "menu-ai",
-    title: "신메뉴 추천 AI — 마진 제약 보장 소상공인 신메뉴 추천",
+    title: "신메뉴 추천 AI : 마진 제약 보장 소상공인 신메뉴 추천",
     meta: "2인 팀 · 시스템 설계 · SFT · Guardrail",
     summary:
       "\"생성은 LLM, 신뢰성은 Guardrail\"이라는 하이브리드 구조로, 마진 위반 메뉴를 구조적으로 차단한 AI 시스템",
@@ -282,7 +282,7 @@ export const projects: Project[] = [
   },
   {
     id: "eogiya",
-    title: "어기야팩토리 거래량 예측",
+    title: "수산물 유통 회사 거래량 예측",
     meta: "거래량 데이터 분석 · 시계열 예측 방법론 비교",
     summary:
       "Naive 베이스라인부터 통계·ML 모델까지 동일 조건에서 비교해, 이 데이터로 예측이 성립하는 해상도와 대상을 먼저 특정한 분석 프로젝트",
