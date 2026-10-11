@@ -202,7 +202,7 @@ export const projects: Project[] = [
   },
   {
     id: "menu-ai",
-    title: "신메뉴 추천 AI : 마진 제약 보장 소상공인 신메뉴 추천",
+    title: "신메뉴 추천 AI — 마진 제약 보장 소상공인 신메뉴 추천",
     meta: "2인 팀 · 시스템 설계 · SFT · Guardrail",
     summary:
       "\"생성은 LLM, 신뢰성은 Guardrail\"이라는 하이브리드 구조로, 마진 위반 메뉴를 구조적으로 차단한 AI 시스템",
