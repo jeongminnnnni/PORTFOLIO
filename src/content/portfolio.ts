@@ -134,13 +134,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-<<<<<<< HEAD
     id: "logistics-rag",
-    title: "물류사 사내 지식검색 챗봇 RAG 고도화",
-=======
-    id: "leona-rag",
     title: "물류회사 사내 지식검색 챗봇 RAG 고도화",
->>>>>>> ae172fcb3d53c3b04f277681ae24b158470e8ee9
     meta: "KMAC AX 컨설팅 · 클라이언트 프로젝트",
     summary:
       "실사용 규모로 넓힐 때마다 드러난 답변 품질 문제를 데이터·검색·근거 전달·대화 구조의 층으로 갈라 진단하고, 고친 뒤 회귀 검증으로 확인한 컨설팅 프로젝트",
@@ -322,13 +317,8 @@ export const projects: Project[] = [
     stack: ["Figma", "Notion"],
   },
   {
-<<<<<<< HEAD
     id: "seafood-forecast",
-    title: "수산물 거래량 예측",
-=======
-    id: "eogiya",
     title: "수산물 유통 회사 거래량 예측",
->>>>>>> ae172fcb3d53c3b04f277681ae24b158470e8ee9
     meta: "거래량 데이터 분석 · 시계열 예측 방법론 비교",
     summary:
       "Naive 베이스라인부터 통계·ML 모델까지 동일 조건에서 비교해, 이 데이터로 예측이 성립하는 해상도와 대상을 먼저 특정한 분석 프로젝트",
